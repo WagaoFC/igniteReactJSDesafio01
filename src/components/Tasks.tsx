@@ -1,5 +1,7 @@
-import styles from './Tasks.module.css'
+import { useState } from 'react'
+import { TaskCreated } from './Taskcreated'
 import clipboard from '../assets/clipboard.svg'
+import styles from './Tasks.module.css'
 
 export function Tasks() {
     return (
@@ -12,7 +14,7 @@ export function Tasks() {
                 <p>Concluídas</p>
                 <span>0</span>
             </div>
-            <img src={clipboard} alt="Ícone clipboard" />
+            {/* <img src={clipboard} alt="Ícone clipboard" />
             <div className={styles.text}>
                 <span>
                     <p>
@@ -23,7 +25,8 @@ export function Tasks() {
                         Crie tarefas e organize seus itens a fazer
                     </p>
                 </span>
-            </div>
+            </div> */}
+            <TaskCreated />
         </div >
     )
 }

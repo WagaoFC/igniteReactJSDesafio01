@@ -1,0 +1,35 @@
+.containerTask {
+    display: flex;
+    align-items: top;
+    gap: 12px;
+    position: absolute;
+    font-weight: 400;
+    margin-top: 3rem;
+    color: var(--gray-100);
+    background: var(--gray-400);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.containerTask button {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: var(--gray-300);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.containerTask button:first-child {
+    color: var(--blue);
+}
+
+.containerTask button:first-child:hover {
+    color: var(--purpleDark);
+}
+
+.containerTask button:hover {
+    color: var(--danger);
+}
