@@ -1,11 +1,30 @@
+.container {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    margin-top: 12.5rem;
+}
+
 .inputTask {
-    width: 638px;
+    width: 39.87rem;
+    height: 3.37rem;
     background: var(--gray-500);
     border: 0;
-    height: 3.37rem;
     padding: 1rem;
     border-radius: 8px;
     color: var(--gray-100);
-    position: absolute;
-    margin-top: 16rem;
+}
+
+.buttonAddTask {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 8px;
+    background: var(--blueDark);
+    color: var(--gray-100);
+    cursor: pointer;
 }

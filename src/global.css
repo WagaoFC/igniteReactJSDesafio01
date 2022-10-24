@@ -22,6 +22,11 @@
     --danger: #E25858;
 }
 
+:focus {
+    outline: transparent;
+    box-shadow: 0 0 0 2px var(--blue);
+}
+
 body {
     background: var(--gray-600);
     color: var(--gray-100);
