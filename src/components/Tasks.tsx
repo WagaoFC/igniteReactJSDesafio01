@@ -14,13 +14,15 @@ export function Tasks() {
             </div>
             <img src={clipboard} alt="Ícone clipboard" />
             <div className={styles.text}>
-                <p>
-                    Você ainda não tem tarefas cadastradas
+                <span>
+                    <p>
+                        Você ainda não tem tarefas cadastradas
+                    </p>
                     <br />
                     <p>
                         Crie tarefas e organize seus itens a fazer
                     </p>
-                </p>
+                </span>
             </div>
         </div >
     )
