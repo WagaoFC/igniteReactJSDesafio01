@@ -4,9 +4,13 @@
     justify-content: space-between;
     position: absolute;
     margin-top: 22.81rem;
-    color: var(--blue);
+    color: var(--purple);
     font-weight: 700;
     line-height: 1rem;
+}
+
+.container .created {
+    color: var(--blue);
 }
 
 .container .counter {
