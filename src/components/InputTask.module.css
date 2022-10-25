@@ -28,3 +28,7 @@
     color: var(--gray-100);
     cursor: pointer;
 }
+
+.buttonAddTask:hover {
+    background: var(--blue);
+}

@@ -1,18 +1,26 @@
 import { useState } from 'react'
-import { TaskCreated } from './Taskcreated'
+import { TaskCreated } from './TaskCreated'
 import clipboard from '../assets/clipboard.svg'
 import styles from './Tasks.module.css'
+import { ITask } from '../App'
 
-export function Tasks() {
+interface Props {
+    tasks: ITask[]
+}
+
+export function Tasks({ tasks }: Props) {
+    const tasksQuantity = tasks.length
+    const completedTasks = tasks.filter(task => task.isCompleted).length
+
     return (
         <div className={styles.container}>
             <div className={styles.counter}>
                 <p className={styles.created}>Tarefas criadas</p>
-                <span>0</span>
+                <span>{tasksQuantity}</span>
             </div>
             <div className={styles.counter}>
                 <p>Concluídas</p>
-                <span>0</span>
+                <span>{completedTasks} de {tasksQuantity}</span>
             </div>
             {/* <img src={clipboard} alt="Ícone clipboard" />
             <div className={styles.text}>
@@ -26,7 +34,13 @@ export function Tasks() {
                     </p>
                 </span>
             </div> */}
-            <TaskCreated />
+            <div className={styles.list}>
+                {tasks.map(task => {
+                    return (
+                        <TaskCreated key={task.id} task={task} />
+                    )
+                })}
+            </div>
         </div >
     )
 }

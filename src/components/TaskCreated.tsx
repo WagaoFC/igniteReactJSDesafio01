@@ -1,15 +1,20 @@
 import { CircleWavyCheck, Trash } from 'phosphor-react'
+import { ITask } from '../App';
 import styles from './TaskCreated.module.css'
 
-export function TaskCreated() {
+interface Props {
+    task: ITask;
+}
+
+export function TaskCreated({ task }: Props) {
     return (
         <div className={styles.containerTask}>
             <button>
-                <CircleWavyCheck size={24} weight="thin" />
+                <CircleWavyCheck size={24} />
             </button>
-            <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+            <p>{task.title}</p>
             <button>
-                <Trash size={24} weight="thin" />
+                <Trash size={24} />
             </button>
         </div>
     )
